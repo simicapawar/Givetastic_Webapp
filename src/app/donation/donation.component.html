@@ -1,0 +1,41 @@
+<div *ngIf = "donations?.length > 0; else noDonations">
+    <ul *ngFor="let donation of donations" >
+        <div class="container">
+            <div>
+                <img>
+            </div>
+            <div style="text-align: center;">
+                <img style="width: 220pt;height: 80pt; margin: 0; padding: 0%; border-radius: 2pt;" 
+                src="images/Aboutus.jpeg">
+                <div style="text-align: left; margin-top: 5pt; font-size: larger;">
+                    <div>
+                        <p>{{ donation.campaignName }}<p>
+                    </div>
+                    <div id="boxes" style="width: 250pt;">
+                        <div id="col1" style="float: left; width: auto;">
+                            <img style="border-radius: 50%; width: 50%; margin-top: 0pt;" 
+                            src= "{{ donation.userProfilePicture }}">
+                        </div>
+                        <div id="col2" >
+                            <p>{{ donation.userName }}</p>
+                        </div>
+                    </div>
+
+
+
+
+                
+
+
+                </div>
+            </div>
+
+        </div>
+    </ul>
+</div>
+
+<ng-template #noDonations>
+    <h2>There are no Donations</h2>
+</ng-template>
+
+

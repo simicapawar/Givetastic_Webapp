@@ -1,0 +1,37 @@
+/*
+.header {
+    background-image: url("images/Aboutus.jpeg");
+
+    min-height: 500px; */
+  
+    /* Center and scale the image nicely */
+    /*
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+    /* Needed to position the navbar */
+    /*
+    position: relative;
+    margin-top: 0px;
+
+    color: aliceblue;
+    text-align: left;    
+}
+
+p {
+    margin-top: 30%;
+    font-size: x-large;
+}
+*/
+
+.example-card {
+    background-image: url('images\Aboutus.jpeg');
+
+  }
+  
+  
+  .example-header-image {
+    background-image: url('images\Aboutus.jpeg');
+    background-size: cover;
+  }

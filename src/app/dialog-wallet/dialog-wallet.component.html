@@ -1,0 +1,43 @@
+<mat-horizontal-stepper linear>
+    <mat-step label="Wallet Information">
+        <form class="wallet-form">
+                <mat-form-field appearance="fill" class="input-full-width" >
+                    <mat-label>Wallet Name</mat-label>
+                    <input matInput placeholder="Last name, First name" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="input-full-width" >
+                    <mat-label>Wallet Amount</mat-label>
+                    <input matInput placeholder="In Euros">
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="input-full-width" >
+                    <mat-label>No of Participants</mat-label>
+                    <input matInput placeholder="Ex 20/30/40">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="End Date of Wallet">
+                
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button matStepperNext>Next</button>
+                </div>
+        </form>
+    </mat-step>
+    <mat-step label="Wallet Customisation">
+        
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="firstCtrl" placeholder="Last name, First name">
+            </mat-form-field>
+            <div>
+                <button mat-raised-button matStepperNext>Next</button>
+            </div>
+       
+    </mat-step>
+    <mat-step label="Thank You">
+        
+            <div>
+                <button mat-raised-button matStepperPervious>Back</button>
+            </div>
+        
+    </mat-step>
+</mat-horizontal-stepper>

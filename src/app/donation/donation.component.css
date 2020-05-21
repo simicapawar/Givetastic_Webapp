@@ -1,0 +1,25 @@
+.container {
+    background-color: white;
+    height: 190pt;
+    width: 250pt;
+    border-radius: 5pt;
+    margin: 1% 8pt 1% 0%;
+    border-color:rgb(226, 220, 220);
+    border-width: 1pt;
+    border-style: inset;
+    float: left;
+}
+.div {
+    float: left;
+}
+#boxes {
+    display: table;
+    clear: both;
+}
+#col1 {
+    width: auto;
+}
+
+#col2 {
+    width: 80%; 
+}

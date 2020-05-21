@@ -1,16 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+/* 
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire'; */
+
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { from } from 'rxjs';
+import { DonationComponent } from './donation/donation.component';
 
+import { DonationService } from './services/donation.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { DialogWalletComponent } from './dialog-wallet/dialog-wallet.component';
+
+ 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    NavigationBarComponent,
+    DonationComponent,
+    DialogWalletComponent,
   ],
+  entryComponents: [DialogWalletComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [DonationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
