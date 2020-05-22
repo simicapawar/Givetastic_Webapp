@@ -4,6 +4,8 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { MatStepper } from '@angular/material/stepper';
 import { MAT_FORM_FIELD } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
+import { MatCheckbox } from '@angular/material/checkbox';
+
 
 
 
@@ -15,6 +17,8 @@ import { MatInput } from '@angular/material/input';
   styleUrls: ['./dialog-wallet.component.css']
 })
 export class DialogWalletComponent implements OnInit {
+
+  color ="purple";
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 

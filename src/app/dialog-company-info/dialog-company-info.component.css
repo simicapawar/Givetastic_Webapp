@@ -1,3 +1,4 @@
+
 .mat-form-field {
     margin-top: 16px;
   }
@@ -5,13 +6,8 @@
     width: 100%;
 }
 
-.wallet-form {
+.companyInfo-form {
     min-width: 150px;
     max-width: 800px;
-    width: 50%;
-    float: right;
+    width: 100%;
   }
-
-.walletImg {
-  src: url('../../../images/Aboutus.jpeg');
-}

@@ -1,6 +1,24 @@
 <div *ngIf = "donations?.length > 0; else noDonations">
     <ul *ngFor="let donation of donations" >
-        <div class="container">
+        <mat-card class="example-card">
+            <mat-card-content>
+              <p><strong>{{ donation.campaignName }}</strong></p>
+            </mat-card-content>
+            <mat-card-header>
+                <div mat-card-avatar>
+                  <img class="example-header-image" 
+                  src= "{{ donation.userProfilePicture }}">
+                </div>
+                <mat-card-subtitle>{{ donation.userName }}</mat-card-subtitle>
+              </mat-card-header>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+
+          
+<!--         <div class="container">
             <div>
                 <img>
             </div>
@@ -30,7 +48,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
     </ul>
 </div>
 

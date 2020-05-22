@@ -1,9 +1,11 @@
 <mat-horizontal-stepper linear>
     <mat-step label="Wallet Information">
+        <img mat-card-lg-image src="images/Aboutus.jpeg">
         <form class="wallet-form">
+<!-------------------------Creation of Wallet Screen 1 ---------------------------->
                 <mat-form-field appearance="fill" class="input-full-width" >
                     <mat-label>Wallet Name</mat-label>
-                    <input matInput placeholder="Last name, First name" required>
+                    <input matInput placeholder="Last name, First name">
                 </mat-form-field>
                 <mat-form-field appearance="fill" class="input-full-width" >
                     <mat-label>Wallet Amount</mat-label>
@@ -13,28 +15,56 @@
                     <mat-label>No of Participants</mat-label>
                     <input matInput placeholder="Ex 20/30/40">
                 </mat-form-field>
+            <p>
                 <mat-form-field>
-                    <input matInput placeholder="End Date of Wallet">
-                
+                        <mat-label>Start Date for Wallet</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                        <mat-label>End Date for Wallet</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </p>
                 <div>
                     <button mat-raised-button matStepperNext>Next</button>
                 </div>
         </form>
     </mat-step>
+<!-------------------------Creation of Wallet Screen 2 ---------------------------->
     <mat-step label="Wallet Customisation">
         
-            <mat-form-field>
-                <mat-label>Name</mat-label>
-                <input matInput formControlName="firstCtrl" placeholder="Last name, First name">
-            </mat-form-field>
             <div>
-                <button mat-raised-button matStepperNext>Next</button>
+                <mat-checkbox color="primary"  >Default</mat-checkbox>
+                <mat-checkbox style="margin-left: 2rem;" color="primary" >Customise Card</mat-checkbox>
+            </div>
+            <div>
+            <mat-form-field>
+                <input fornControlName=" Color" matInput [style.background]="color" [(colorPicker)]="color" [cpPosition]="'bottom'" placeholder="Choose Wallet Card Colour">
+            </mat-form-field>
+        </div>
+            <mat-form-field>
+                <mat-label>Add a '#' to your Public Giveboard</mat-label>
+                <input matInput placeholder="Ex #Helden">
+            </mat-form-field>
+            
+            <div>
+                <button  mat-raised-button matStepperNext>Next</button>
             </div>
        
     </mat-step>
+<!-------------------------Creation of Wallet Screen 2 ---------------------------->
     <mat-step label="Thank You">
-        
+        <div class="mat-typography" style="align-items: center; margin-left: 6rem;">
+        <h1>Thank You ! </h1>
+        <h3>You will recieve a Link on</h3>
+        <h3>Your Email for Wallet Activation</h3>
+        </div>
             <div>
                 <button mat-raised-button matStepperPervious>Back</button>
             </div>

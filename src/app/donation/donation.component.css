@@ -23,3 +23,22 @@
 #col2 {
     width: 80%; 
 }
+
+.example-card {
+    float :left;
+    list-style: none;
+    outline: black;
+    float: left;
+    background-color : white;
+    margin-left: 15px;
+    height: 100pt;
+    width: 250pt;
+    border-radius: 5pt;
+    margin: 2% 2% 2% 2%;}
+
+.example-header-image {
+  background-size: cover;
+  border-radius: 50%; 
+  width: 80%; 
+  margin-top: 0pt;
+}

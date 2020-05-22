@@ -29,17 +29,24 @@
             </ul>
         </div>
     </div>
-</nav> -->
-
+</nav> 
+-->
 <mat-toolbar color="primary" class="navbar">
     <div>Givetastic</div>
     <div>
         <span>
-            <button mat-raised-button (click)="openDialog()">Create Wallet</button>
+            <button mat-raised-button (click)="openCompanyInfoDialog()">Company Info</button>
         </span>
         <span>
-            <button mat-raised-button>Logout</button>
+            <button mat-raised-button (click)="openCreateWalletDialog()">Create Wallet</button>
         </span>
-        <span></span>
+        <span>
+            <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon>view_headline</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                 <button mat-menu-item >Logout</button>
+        </mat-menu>
+    </span>
     </div>
-</mat-toolbar>
+</mat-toolbar> 
